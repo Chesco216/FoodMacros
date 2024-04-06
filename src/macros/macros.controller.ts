@@ -11,8 +11,12 @@ export class MacrosController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.macrosService.findOne(id);
+  findByCategory(@Param('id') id: string) {
+    return this.macrosService.findByCategory(id);
   }
-
+  
+  @Get(':id')
+  findByName(@Param('id') id: string) {
+    return this.macrosService.findByName(id);
+  }
 }

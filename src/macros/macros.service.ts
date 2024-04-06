@@ -9,8 +9,11 @@ export class MacrosService {
     return macros;
   }
 
-  findOne(id: string) {
+  findByCategory(id: string) {
     return macros.filter( food => food.categoria == id );
   }
 
+  findByName(id: string) {
+    return macros.filter( food => food.nombre == id );
+  }
 }
